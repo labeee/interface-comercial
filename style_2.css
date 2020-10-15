@@ -2,6 +2,20 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* The .modebar class hides the floating toolbar of the graph objects from plotly.
+/* .modebar{
+    display: none !important;
+} */
+
+button {
+    border: none;
 }
 
 header {
@@ -28,9 +42,6 @@ header {
 
 .left-area span {
     color: #1DC4E7;
-}
-
-.right-area {
 }
 
 .right-area a {
@@ -122,4 +133,188 @@ label #sidebar-btn:hover {
 
 #check {
     display: none;
+}
+
+.data-area {
+    position: fixed;
+    display: flex;
+    height: 89%;
+    width: 82%;
+    top: 70px;
+    left: 250px;
+    transition: 0.5s;
+    transition-property: left, width;
+}
+
+#check:checked ~ .data-area {
+    left: 80px;
+    width: 94.5%;
+}
+
+.input-area {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-color: #22242A;
+    scrollbar-width: thin;
+}
+
+.output-area {
+    width: 50%;
+    height: 100%;
+    background-color: #5C9E5D;
+}
+
+.edific-buttons {
+    display: flex;
+    width: 100%;
+}
+
+.real-button, .reference-button {
+    width: 50%;
+    background-color: #6D768F;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.real-button:hover, .reference-button:hover {
+    background-color: #414757;
+}
+
+.app-section {
+    display: flex;
+    width: 100%;
+}
+
+.app-unit {
+    background-color: #22242A;
+    color: #fff;
+    width: 30%;
+    text-align: center;
+    padding: 3px;
+}
+
+.app-arrow {
+    background-color: #22242A;
+    color: #fff;
+    width: 5%;
+    text-align: center;
+    padding: 3px;
+}
+
+.app-section a:hover {
+    background-color: #1DC4E7;
+    cursor: pointer;
+}
+
+.classification-button-area {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(152px);
+}
+
+.classification-button {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #CBCBCB;
+    color: #2F323A;
+    border: none;
+    outline: none;
+}
+
+.classification-button:hover {
+    background-color: #B2B1B1;
+    cursor: pointer;
+}
+
+.vol-mat {
+    background-color: cornflowerblue;
+    display: flex;
+    width: 100%;
+}
+
+.vol-mat-item {
+    width: 50%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    border-bottom: 1px solid;
+    border-color: #22242A;
+    
+}
+
+.vol-mat-item:hover {
+    background-color: brown;
+}
+
+.input-links {
+    position: relative;
+    width: 100%;
+    display: grid;
+}
+
+.input-button {
+    border-top-width: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 1px solid;
+    border-color: #22242A;
+    color: #22242A;
+    background-color: #fff;
+}
+
+.input-button--active {
+    
+}
+
+.input-button:hover {
+    background-color: #87D1FF;
+    cursor: pointer;
+}
+
+.input-button-content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.2s;
+}
+
+.br-region {
+    position: relative;
+    width: 100%;
+}
+
+.region {
+    display: inline-block;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    width: 49.6%;
+    text-align: center;
+    background-color: #87D1FF;
+}
+
+.esquadrias-content-item {
+    display: block;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-bottom: solid 1px;
+    text-align: center;
 }
